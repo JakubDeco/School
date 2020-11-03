@@ -1,5 +1,6 @@
 package sk.kosickaakademia.deco.school;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Student {
@@ -20,9 +21,10 @@ public class Student {
         this.grades=grades;
         this.salary=salary;
     }
-    public Student(String fName,String lName,ClassName className,Grades grades){
+    public Student(String fName,String lName,Date dob,ClassName className,Grades grades){
         this.fName=fName;
         this.lName=lName;
+        this.dob=dob;
         this.className=className;
         this.grades=grades;
     }
@@ -67,5 +69,10 @@ public class Student {
     }
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public void printStudent(){
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(fName+" "+lName+" "+sdf.format(dob)+" "+className);
     }
 }
