@@ -15,7 +15,8 @@ public class Student {
     private Grades grades;
     private double salary;
     private Hobby[] hobbies=new Hobby[5];
-    private Pet pet;
+    private Pet pet=null;/*java sets null as default but other languages might not.
+    Thus it isn't bad putting it in manually or just keeping it in mind*/
 
     //methods
     public Student(String fName,String lName,Date dob,ClassName className,Grades grades,double salary){
@@ -39,6 +40,10 @@ public class Student {
     }
     public Pet getPet() {
         return pet;
+    }
+    public void printPet(){
+        if (pet!=null) System.out.println(pet.getClass().getSimpleName());
+        else System.out.println("Does not have pet.");
     }
 
 
