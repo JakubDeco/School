@@ -1,5 +1,8 @@
 package sk.kosickaakademia.deco.school;
 
+import sk.kosickaakademia.deco.school.animal.Pet;
+import sk.kosickaakademia.deco.school.hobby.Hobby;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,6 +14,8 @@ public class Student {
     private ClassName className;
     private Grades grades;
     private double salary;
+    private Hobby[] hobbies=new Hobby[5];
+    private Pet pet;
 
     //methods
     public Student(String fName,String lName,Date dob,ClassName className,Grades grades,double salary){
@@ -27,6 +32,23 @@ public class Student {
         this.dob=dob;
         this.className=className;
         this.grades=grades;
+    }
+
+    public void setPet(Pet pet){
+        this.pet=pet;
+    }
+    public Pet getPet() {
+        return pet;
+    }
+
+
+    //todo addHobies() by calling hobby constructor
+    //public Hobby[] createHobbies(){}
+
+    public void printHobbies(){
+        for (int i = 0; i < hobbies.length; i++) {
+            System.out.println(hobbies[i]+" ");
+        }
     }
 
     public String getFName() {

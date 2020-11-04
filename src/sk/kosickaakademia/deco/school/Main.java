@@ -1,5 +1,9 @@
 package sk.kosickaakademia.deco.school;
 
+import sk.kosickaakademia.deco.school.animal.Dog;
+import sk.kosickaakademia.deco.school.animal.Fish;
+import sk.kosickaakademia.deco.school.animal.Pet;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,6 +16,20 @@ public class Main {
         sortByAvg(students);
         printStudents(students);
         printClassOfStudents(students,ClassName.N2);
+
+        System.out.println();
+        addPets(students);
+    }
+    //todo
+    /*public static void createHobbies(Student students){
+        students[0]
+    }*/
+    public static void addPets(Student[] students){
+        Pet p1=new Fish(5);
+        students[0].setPet(p1);
+
+        Pet p3=new Dog("Dunco");
+        students[2].setPet(p3);
     }
 
     public static void printClassOfStudents(Student[] s,ClassName className){
