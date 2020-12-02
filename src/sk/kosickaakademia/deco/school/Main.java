@@ -2,13 +2,12 @@ package sk.kosickaakademia.deco.school;
 
 import sk.kosickaakademia.deco.school.animal.*;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args){
-        Student[] students=createStudents();
+        /*Student[] students=createStudents();
         printStudents(students);
 
         System.out.println(students[2].getGrades().calcAvg());
@@ -20,8 +19,9 @@ public class Main {
 
         students[7].printPet();
         students[0].printPet();
-
-        System.out.println("Faktorial cisla 5: "+Faktorial.faktorialCisla(5));
+*/
+        System.out.println("Faktorial cisla 5: "+ Recursive.faktorialCisla(5));
+        System.out.println(Recursive.sumUnderLine(1));
 
     }
     //todo create hobbies for students
